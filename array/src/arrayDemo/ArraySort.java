@@ -6,8 +6,8 @@ public class ArraySort {
     public static void main(String[] args) {
 
         int[] array1 = {4, 5, 6, 8, 7, 1, 3, 2};
-        int[] array2 = new int[12];
-        for (int i = 0; i < 12; i++) {
+        int[] array2 = new int[10];
+        for (int i = 0; i < 10; i++) {
             array2[i] = new Random().nextInt(15);
 
         }
@@ -16,7 +16,7 @@ public class ArraySort {
         showArray(array2);
 
         quickSort(array1,0, array1.length-1);
-        quickSort(array2,0, array1.length-1);
+        quickSort(array2,0, array2.length-1);
 
         showArray(array1);
         showArray(array2);
@@ -57,7 +57,7 @@ public class ArraySort {
 
         // 核心算法部分：分别介绍 双边指针（交换法），双边指针（挖坑法），单边指针
         int pivotIndex = doublePointerSwap(arr, startIndex, endIndex);
-        // int pivotIndex = doublePointerHole(arr, startIndex, endIndex);
+        //int pivotIndex = doublePointerHole(arr, startIndex, endIndex);
         // int pivotIndex = singlePointer(arr, startIndex, endIndex);
 
         // 用分界值下标区分出左右区间，进行递归调用
@@ -85,11 +85,13 @@ public class ArraySort {
 
         while (leftPoint < rightPoint) {
             // 从右向左找出比pivot小的数据
-            while (leftPoint < rightPoint && arr[rightPoint] > pivot) {
+            while (leftPoint < rightPoint
+                    && arr[rightPoint] > pivot) {
                 rightPoint--;
             }
             // 从左向右找出比pivot大的数据
-            while (leftPoint < rightPoint && arr[leftPoint] <= pivot) {
+            while (leftPoint < rightPoint
+                    && arr[leftPoint] <= pivot) {
                 leftPoint++;
             }
             // 没有过界则交换
@@ -98,7 +100,8 @@ public class ArraySort {
             }
         }
         // 最终将分界值与当前指针数据交换
-        swap(arr, startIndex, rightPoint);
+        arr[startIndex] = arr[rightPoint];
+        arr[rightPoint] = pivot;
         // 返回分界值所在下标
         return rightPoint;
     }

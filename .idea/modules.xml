@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaSE_Train.iml" filepath="$PROJECT_DIR$/JavaSE_Train.iml" />
+      <module fileurl="file://$PROJECT_DIR$/array/array.iml" filepath="$PROJECT_DIR$/array/array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/digits/digits.iml" filepath="$PROJECT_DIR$/digits/digits.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-app/hello-app.iml" filepath="$PROJECT_DIR$/hello-app/hello-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loop-demo/loop-demo.iml" filepath="$PROJECT_DIR$/loop-demo/loop-demo.iml" />
+    </modules>
+  </component>
+</project>
